@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 import './Home.css';
 
 function Home() {
-    const [display, setDisplay] = useState('');
-    const [result, setResult] = useState('');
+    const [display, setDisplay] = useState('')
+    const [result, setResult] = useState('')
   
     const handleClick = (value) => {
       if (value === '=') {
         try {
-          setResult(eval(display));
+          setResult(eval(display))
         } catch (error) {
-          setResult('Error');
+          setResult('Error')
         }
       } else if (value === 'C') {
-        setDisplay('');
-        setResult('');
+        setDisplay('')
+        setResult('')
       } else {
-        setDisplay(display + value);
+        setDisplay(display + value)
       }
-    };
+    }
   
     return (
       <div className="calculator">
